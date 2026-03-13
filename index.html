@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estándares de Credenciales Verificables por Caso de Uso</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="overlay" id="overlay" onclick="closePanel()"></div>
+<div class="detail-panel" id="detailPanel">
+  <button class="panel-close" onclick="closePanel()">✕</button>
+  <div class="panel-content" id="panelContent"></div>
+</div>
+
+<div class="container">
+
+  <div class="logo-bar">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAjCAIAAAB6jJ8NAAADF0lEQVR4nO1Wu07rQBCd3XiNgCArgIQMookUgURHA1QgJCgsaNLTQEFHRUXDN8AP8AcUIBoKWn4gHRJFlAJDIJDEgY3t3VuM2Guv1xHQ3FtwCss7+zgzc2YfAL/41yBam1JKKTUOjaKIEFIoFIy9UkpCSBzHUsp8NqLz/QDaIn8blFIhxMrKiud5QRCocVLKQqEQBMHp6enMzMzu7m4Yhlk3Mbizs7NGo0EIMcRhWRYAHB8fyxwwxtbW1vJ6EaurqwCQTKOl0fR6Pfw2m00hBKU0jmPbtpvNZhzHYRgCQBRFj4+PnHNUSwgxPDw8OTlpWRYOSPltzGC73V5eXn55eWGMYbCYQMYYxrqzs3NzczM2NkYIabfbGxsb19fXWQEMBLiclLLT6XDOOed6KgEAIAgCAOh0Osm4jTBHAJ+SUEqVXFLK29vb2dlZAHh6eoJPYaMoyqtdADCXvCqDpIDI6jiO4ziYfWUfUPtmguwE9HFpaalWq9VqtcXFRUhXS950arSmXKCUMYYZUwkUQmBAyKExJaW2jNakUQiBywFAq9VKDlYloOxZ6CJrEEJsbm6ur6/3ej3O+dzcHNo556VS6fDwMAzD9/f3SqXyEwKUulqt7u/vJykppZzzcrl8dHSkTckelLkEqkKw2Lvd7sPDw8jIyPT0NHLjpg3D0Pf9fr9v27Zt2x8fH5CWM5dASYI/vu9XKhW1YxUYY3t7e5pRaQZ5ZZoFzkEHNbRaLdd1r66uLi4uFhYWIJ2orxJgHMa7SAjhuq7nedvb21NTU5AuyK8SDIY6RKMo0rpyCSzLws2VRN7W1QRLraO11dny/Pyctb+9veU5lAc9AnRhaGjo4OCgWq0q++jo6NbWlud5xlUGHHZ6BChjqVQ6OTnxff/8/BwtruteXl5+130DAR4vr6+vxWKxXq/DZ4H2+31CCCGEUppVYsBzRO8oFouO4wghCCF4905MTIyPj8dxnIyyXq9TSsvlMgDc398TQubn5wHg7u6u2+2aXxVm/u+/lHLfRaob+fGLP1kazBteqOpVAIkT7Bf/Ef4AnBvHVfvrqU4AAAAASUVORK5CYII=" style="height:44px;image-rendering:pixelated;" alt="CDPI Logo">
+      <div><div style="font-size:13px;font-weight:700;color:#e2e8f0;font-family:'IBM Plex Sans',sans-serif;line-height:1.2;">Centre for Digital Public<br>Infrastructure</div></div>
+    </div>
+    <div class="logo-divider"></div>
+    <span class="logo-tagline" data-i18n="tagline"></span>
+    <div class="lang-switcher">
+      <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
+      <button class="lang-btn active" data-lang="es" onclick="setLanguage('es')">ES</button> 
+    </div>
+  </div>
+
+  <header>
+    <div class="eyebrow" data-i18n="eyebrow"></div>
+    <h1 data-i18n-html="h1"></h1>
+    <p class="subtitle" data-i18n="subtitle"></p>
+  </header>
+
+  <div class="legend">
+    <div class="legend-title" data-i18n="legendTitle"></div>
+    <div class="legend-item c-w3c"><div class="legend-dot dot-w3c"></div>W3C VC Data Model</div>
+    <div class="legend-item c-mdoc"><div class="legend-dot dot-mdoc"></div>ISO/IEC 18013-5 mDL</div>
+    <div class="legend-item c-oidc"><div class="legend-dot dot-oidc"></div>OID4VC / OIDC</div>
+    <div class="legend-item c-anoncred"><div class="legend-dot dot-anoncred"></div>AnonCreds (ZKP)</div>
+    <div class="legend-item c-sd-jwt"><div class="legend-dot dot-sd-jwt"></div>SD-JWT VC</div>
+    <div class="legend-item c-ebsi"><div class="legend-dot dot-ebsi"></div>EBSI / eIDAS 2.0</div>
+  </div>
+
+  <div class="grid" id="cardsGrid"></div>
+
+  <div class="table-section">
+    <div class="section-header">
+      <div class="section-title" data-i18n="sectionTitle"></div>
+      <div class="section-sub" data-i18n="sectionSub"></div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th data-i18n="thStandard"></th>
+            <th data-i18n="thZKP"></th>
+            <th data-i18n="thSD"></th>
+            <th data-i18n="thOffline"></th>
+            <th data-i18n="thGov"></th>
+            <th data-i18n="thMaturity"></th>
+            <th data-i18n="thBest"></th>
+          </tr>
+        </thead>
+        <tbody id="compTable"></tbody>
+      </table>
+    </div>
+    <div class="table-legend">
+      <div class="table-legend-title" data-i18n="tableLegendTitle"></div>
+      <div class="tl-item"><span class="tl-sym check">✓</span><span data-i18n="tlCheck"></span></div>
+      <div class="tl-item"><span class="tl-sym partial">◑</span><span data-i18n="tlPartial"></span></div>
+      <div class="tl-item"><span class="tl-sym cross">—</span><span data-i18n="tlCross"></span></div>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

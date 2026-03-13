@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VC Ecosystem Cheatsheet</title>
+<link rel="stylesheet" href="cheatsheet.css">
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <div class="page-header">
+    <div>
+      <h1 data-i18n-html="headerTitle">Verifiable Credentials: <span>Standards, Use Cases &amp; DPG Platforms</span></h1>
+      <div class="subtitle" data-i18n="headerSubtitle">Participant Reference Cheatsheet · 30-Minute Session</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px;">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAjCAIAAAB6jJ8NAAADF0lEQVR4nO1Wu07rQBCd3XiNgCArgIQMookUgURHA1QgJCgsaNLTQEFHRUXDN8AP8AcUIBoKWn4gHRJFlAJDIJDEgY3t3VuM2Guv1xHQ3FtwCss7+zgzc2YfAL/41yBam1JKKTUOjaKIEFIoFIy9UkpCSBzHUsp8NqLz/QDaIn8blFIhxMrKiud5QRCocVLKQqEQBMHp6enMzMzu7m4Yhlk3Mbizs7NGo0EIMcRhWRYAHB8fyxwwxtbW1vJ6EaurqwCQTKOl0fR6Pfw2m00hBKU0jmPbtpvNZhzHYRgCQBRFj4+PnHNUSwgxPDw8OTlpWRYOSPltzGC73V5eXn55eWGMYbCYQMYYxrqzs3NzczM2NkYIabfbGxsb19fXWQEMBLiclLLT6XDOOed6KgEAIAgCAOh0Osm4jTBHAJ+SUEqVXFLK29vb2dlZAHh6eoJPYaMoyqtdADCXvCqDpIDI6jiO4ziYfWUfUPtmguwE9HFpaalWq9VqtcXFRUhXS950arSmXKCUMYYZUwkUQmBAyKExJaW2jNakUQiBywFAq9VKDlYloOxZ6CJrEEJsbm6ur6/3ej3O+dzcHNo556VS6fDwMAzD9/f3SqXyEwKUulqt7u/vJykppZzzcrl8dHSkTcmelLkEqkKw2Lvd7sPDw8jIyPT0NHLjpg3D0Pf9fr9v27Zt2x8fH5CWM5dASYI/vu9XKhW1YxUYY3t7e5pRaQZ5ZZoFzkEHNbRaLdd1r66uLi4uFhYWIJ2orxJgHMa7SAjhuq7nedvb21NTU5AuyK8SDIY6RKMo0rpyCSzLws2VRN7W1QRLraO11dny/Pyctb+9veU5lAc9AnRhaGjo4OCgWq0q++jo6NbWlud5xlUGHHZ6BChjqVQ6OTnxff/8/BwtruteXl5+130DAR4vr6+vxWKxXq/DZ4H2+31CCCGEUppVYsBzRO8oFouO4wghCCF4905MTIyPj8dxnIyyXq9TSsvlMgDc398TQubn5wHg7u6u2+2aXxVm/u+/lHLfRaob+fGLP1kazBteqOpVAIkT7Bf/Ef4AnBvHVfvrqU4AAAAASUVORK5CYII=" style="height:36px;image-rendering:pixelated;" alt="CDPI Logo">
+      <div style="font-size:10px;font-weight:700;color:#0D1B2A;line-height:1.2;font-family:'IBM Plex Sans',sans-serif;">Centre for Digital<br>Public Infrastructure</div>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+        <button class="lang-btn" data-lang="es" onclick="setLanguage('es')">ES</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Body -->
+  <div class="body-grid">
+
+    <!-- COL 1: Standards + Use Cases -->
+    <div>
+      <div class="col-header"><span data-i18n="col1Header">Standards &amp; Formats</span><span data-i18n="col1HeaderSub">What shape the credential takes</span></div>
+
+      <div class="section-title" data-i18n="sixStandardsTitle">The Six Standards</div>
+
+      <div class="std-card c-w3c">
+        <div class="std-name">W3C VC Data Model</div>
+        <div class="std-org">W3C / DIF</div>
+        <div class="std-tag">Format · JSON-LD / JWT</div>
+        <div class="std-best" data-i18n="w3cBest">Education · B2B · Supply Chain · IoT</div>
+      </div>
+      <div class="std-card c-mdoc">
+        <div class="std-name">ISO 18013-5 mDL</div>
+        <div class="std-org">ISO / IEC</div>
+        <div class="std-tag">Format + Proximity Protocol</div>
+        <div class="std-best" data-i18n="mdocBest">Licenses · Physical ID · Travel · Offline</div>
+      </div>
+      <div class="std-card c-oidc">
+        <div class="std-name">OID4VC (OID4VCI + OID4VP)</div>
+        <div class="std-org">OpenID Foundation</div>
+        <div class="std-tag">Protocol · Transport Layer</div>
+        <div class="std-best" data-i18n="oidcBest">Wallets · APIs · Issuance · Verification</div>
+      </div>
+      <div class="std-card c-anon">
+        <div class="std-name">AnonCreds (ZKP)</div>
+        <div class="std-org">Hyperledger / AnonCreds WG</div>
+        <div class="std-tag">Format · Zero-Knowledge Proofs</div>
+        <div class="std-best" data-i18n="anonBest">Health · Age predicates · Privacy-max</div>
+      </div>
+      <div class="std-card c-sdjwt">
+        <div class="std-name">SD-JWT VC</div>
+        <div class="std-org">IETF OAuth WG</div>
+        <div class="std-tag">Format · JWT-native</div>
+        <div class="std-best" data-i18n="sdjwtBest">KYC · Selective disclosure · Fintech</div>
+      </div>
+      <div class="std-card c-ebsi">
+        <div class="std-name">EBSI / eIDAS 2.0</div>
+        <div class="std-org">European Commission</div>
+        <div class="std-tag">Ecosystem · Legal framework</div>
+        <div class="std-best" data-i18n="ebsiBest">National ID · Gov EU · SME · EUDIW</div>
+      </div>
+
+      <div class="section-title" style="margin-top:8px" data-i18n="useCasesTitle">13 Use Cases at a Glance</div>
+
+      <div class="uc-row"><span class="uc-icon">🪪</span><span class="uc-name" data-i18n="ucNationalId">National ID</span><span class="uc-std">EBSI + mDL ISO</span></div>
+      <div class="uc-row"><span class="uc-icon">🎓</span><span class="uc-name" data-i18n="ucEducation">Education</span><span class="uc-std">W3C VC + OID4VC</span></div>
+      <div class="uc-row"><span class="uc-icon">🚗</span><span class="uc-name" data-i18n="ucDriverLicense">Driver's License</span><span class="uc-std">mDL ISO 18013-5</span></div>
+      <div class="uc-row"><span class="uc-icon">🏢</span><span class="uc-name" data-i18n="ucSME">SME Identity</span><span class="uc-std">EBSI + W3C VC</span></div>
+      <div class="uc-row"><span class="uc-icon">🏥</span><span class="uc-name" data-i18n="ucHealthcare">Healthcare</span><span class="uc-std">AnonCreds (ZKP)</span></div>
+      <div class="uc-row"><span class="uc-icon">🏦</span><span class="uc-name" data-i18n="ucKYC">KYC / Finance</span><span class="uc-std">SD-JWT VC + OID4VC</span></div>
+      <div class="uc-row"><span class="uc-icon">⚖️</span><span class="uc-name" data-i18n="ucProfLicenses">Professional Licenses</span><span class="uc-std">W3C VC + EBSI</span></div>
+      <div class="uc-row"><span class="uc-icon">🔞</span><span class="uc-name" data-i18n="ucAgeVerif">Age Verification</span><span class="uc-std">AnonCreds / mDL</span></div>
+      <div class="uc-row"><span class="uc-icon">📦</span><span class="uc-name" data-i18n="ucSupplyChain">Supply Chain</span><span class="uc-std">W3C VC + OID4VC</span></div>
+      <div class="uc-row"><span class="uc-icon">✈️</span><span class="uc-name" data-i18n="ucTourism">Tourism / Travel</span><span class="uc-std">mDL + OID4VC</span></div>
+      <div class="uc-row"><span class="uc-icon">🌾</span><span class="uc-name" data-i18n="ucAgriculture">Agriculture / ESG</span><span class="uc-std">W3C VC + UNTP</span></div>
+      <div class="uc-row"><span class="uc-icon">🏛️</span><span class="uc-name" data-i18n="ucGovDigital">Gov Digital Services</span><span class="uc-std">EBSI + W3C VC</span></div>
+      <div class="uc-row"><span class="uc-icon">🌐</span><span class="uc-name" data-i18n="ucIoT">IoT / M2M Devices</span><span class="uc-std">W3C VC + DIDComm</span></div>
+    </div>
+
+    <!-- COL 2: Matrix -->
+    <div>
+      <div class="col-header"><span data-i18n="col2Header">DPG Platform × Use Case Matrix</span><span data-i18n="col2HeaderSub">Which platform supports what today</span></div>
+      <div class="matrix-wrap">
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th style="text-align:left" data-i18n="matrixUseCase">Use Case</th>
+              <th class="th-inji">INJI</th>
+              <th class="th-credebl">CREDEBL</th>
+              <th class="th-walt">walt.id</th>
+              <th class="th-quark">QuarkID</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n="matrixNationalId">🪪 National ID</td>         <td class="ck">✓</td><td class="pr">◑</td><td class="ck">✓</td><td class="pr">◑</td></tr>
+            <tr><td data-i18n="matrixEducation">🎓 Education</td>             <td class="pr">◑</td><td class="ck">✓</td><td class="ck">✓</td><td class="pr">◑</td></tr>
+            <tr><td data-i18n="matrixDriverLicense">🚗 Driver's License</td>  <td class="ck">✓</td><td class="no">—</td><td class="ck">✓</td><td class="no">—</td></tr>
+            <tr><td data-i18n="matrixTourism">✈️ Tourism / Travel</td>        <td class="ck">✓</td><td class="no">—</td><td class="ck">✓</td><td class="no">—</td></tr>
+            <tr><td data-i18n="matrixHealthcare">🏥 Healthcare / ZKP</td>     <td class="no">—</td><td class="ck">✓</td><td class="pr">◑</td><td class="pr">◑</td></tr>
+            <tr><td data-i18n="matrixKYC">🏦 KYC / Finance</td>              <td class="pr">◑</td><td class="pr">◑</td><td class="ck">✓</td><td class="pr">◑</td></tr>
+            <tr><td data-i18n="matrixAgriculture">🌾 Agriculture / ESG</td>   <td class="pr">◑</td><td class="pr">◑</td><td class="ck">✓</td><td class="pr">◑</td></tr>
+            <tr><td data-i18n="matrixGovDigital">🏛️ Gov Digital</td>          <td class="ck">✓</td><td class="pr">◑</td><td class="ck">✓</td><td class="ck">✓</td></tr>
+            <tr><td data-i18n="matrixIoT">🌐 IoT / M2M</td>                  <td class="no">—</td><td class="pr">◑</td><td class="pr">◑</td><td class="no">—</td></tr>
+          </tbody>
+        </table>
+        <div class="legend-row">
+          <div class="legend-item"><span class="ck" style="font-size:11px">✓</span> <span data-i18n="legendNative">Native production support</span></div>
+          <div class="legend-item"><span class="pr" style="font-size:11px">◑</span> <span data-i18n="legendPartial">Partial / in development</span></div>
+          <div class="legend-item"><span class="no" style="font-size:11px">—</span> <span data-i18n="legendNot">Not supported today</span></div>
+        </div>
+      </div>
+
+      <div class="section-title" style="margin-top:10px" data-i18n="gapsTitle">Critical Interoperability Gaps</div>
+
+      <div class="gap-box gap-rose">
+        <div class="gap-title" data-i18n="gap1Title">AnonCreds ≠ OID4VP (today)</div>
+        <div class="gap-body" data-i18n="gap1Body">CREDEBL's ZKP capability only works over DIDComm. No standard OID4VP path yet. ETA: 12–24 months.</div>
+      </div>
+      <div class="gap-box gap-amber">
+        <div class="gap-title" data-i18n="gap2Title">QuarkID's WACI-DIDComm divergence</div>
+        <div class="gap-body" data-i18n="gap2Body">WACI-DIDComm is not directly compatible with OID4VP verifiers. Bridge required for global interop.</div>
+      </div>
+      <div class="gap-box gap-purple">
+        <div class="gap-title" data-i18n="gap3Title">Apple Wallet: mDoc-only (no OID4VP)</div>
+        <div class="gap-body" data-i18n="gap3Body">Safari DC API supports org-iso-mdoc only. SD-JWT VC and W3C VC cannot be presented via Safari today.</div>
+      </div>
+      <div class="gap-box gap-teal">
+        <div class="gap-title" data-i18n="gap4Title">Bridge pattern — proven in production</div>
+        <div class="gap-body" data-i18n="gap4Body">OID4VC ↔ DIDComm hybrid possible: DIDComm endpoint embedded in DID after OID4VC handshake. Demonstrated: IATA One ID (Oct 2024).</div>
+      </div>
+    </div>
+
+    <!-- COL 3: DPG Platforms + Decision guide -->
+    <div>
+      <div class="col-header"><span data-i18n="col3Header">DPG Platforms</span><span data-i18n="col3HeaderSub">Architecture &amp; sweet spot</span></div>
+
+      <div class="dpg-card dpg-inji">
+        <div class="dpg-name">INJI (MOSIP)</div>
+        <div class="dpg-org">MOSIP · Open-source DPG</div>
+        <div class="dpg-stack">OID4VCI · OID4VP · SD-JWT VC · ISO 18013-5</div>
+        <div class="dpg-sweet" data-i18n="injiSweet">🎯 Government-scale national credential programs. 100M+ IDs in production across 10+ countries. OID4VC + mDL native. Components: Inji Wallet, Inji Web, Inji Certify, Inji Verify.</div>
+      </div>
+
+      <div class="dpg-card dpg-credebl">
+        <div class="dpg-name">CREDEBL (AYANWORKS)</div>
+        <div class="dpg-org">AYANWORKS · LFDT · Hyperledger</div>
+        <div class="dpg-stack">DIDComm v1/v2 · AnonCreds · OID4VC · SD-JWT VC</div>
+        <div class="dpg-sweet" data-i18n="credeblSweet">🎯 ZKP-max privacy use cases. Only DPG with production AnonCreds predicates. Built on Credo (ex-Aries Framework JS). Dual-stack: DIDComm legacy + OID4VC modern path.</div>
+      </div>
+
+      <div class="dpg-card dpg-walt">
+        <div class="dpg-name">walt.id</div>
+        <div class="dpg-org">walt.id GmbH · EUDIW-aligned</div>
+        <div class="dpg-stack">OID4VCI · OID4VP · SIOPv2 · W3C VC · SD-JWT VC · mDoc</div>
+        <div class="dpg-sweet" data-i18n="waltSweet">🎯 EU regulatory contexts and multi-format wallets. Most ARF/HAIP-aligned platform. Simultaneous support for all major formats. Best fit for EUDIW pilots.</div>
+      </div>
+
+      <div class="dpg-card dpg-quark">
+        <div class="dpg-name">QuarkID</div>
+        <div class="dpg-org">Buenos Aires · Extrimian · LATAM</div>
+        <div class="dpg-stack">WACI-DIDComm · W3C VC · zkSync L2 · BBS+</div>
+        <div class="dpg-sweet" data-i18n="quarkSweet">🎯 LATAM government digital identity. Blockchain-anchored trust (zkSync). Production in Buenos Aires. DIDComm-primary — OID4VC bridge needed for global interop.</div>
+      </div>
+
+      <div class="section-title" style="margin-top:8px" data-i18n="decisionTitle">Decision Quick-Guide</div>
+
+      <div style="font-size: 9px; line-height: 1.7; color: var(--dgray);">
+        <div data-i18n-html="d1">🏛️ <strong>Gov scale + OID4VC</strong> → <span style="color:var(--inji);font-weight:600">INJI</span></div>
+        <div data-i18n-html="d2">🇪🇺 <strong>EU regulatory / EUDIW</strong> → <span style="color:var(--walt);font-weight:600">walt.id</span></div>
+        <div data-i18n-html="d3">🔏 <strong>ZKP privacy-max</strong> → <span style="color:var(--credebl);font-weight:600">CREDEBL</span></div>
+        <div data-i18n-html="d4">🌎 <strong>LATAM government</strong> → <span style="color:var(--quark);font-weight:600">QuarkID</span></div>
+        <div data-i18n-html="d5">🪪 <strong>mDL / offline physical ID</strong> → <span style="color:var(--inji);font-weight:600">INJI</span> or <span style="color:var(--walt);font-weight:600">walt.id</span></div>
+        <div data-i18n-html="d6">📦 <strong>Supply chain / agriculture</strong> → <span style="color:var(--walt);font-weight:600">walt.id</span> + W3C VC + OID4VC</div>
+        <div data-i18n-html="d7">🌐 <strong>IoT / M2M (frontier)</strong> → Any OID4VC + DIDComm layer</div>
+      </div>
+
+      <div class="section-title" style="margin-top:8px" data-i18n="stackTitle">The Four Layers (Stack)</div>
+      <div style="font-size:9px; line-height:1.65;">
+        <div style="margin-bottom:3px"><span style="background:#fce7f3;color:#db2777;padding:1px 5px;border-radius:2px;font-family:monospace;font-size:8px;font-weight:600">L4 TRUST</span> &nbsp;<span data-i18n="l4text">Trust Registry · EBSI · OpenID Federation</span></div>
+        <div style="margin-bottom:3px"><span style="background:#d1fae5;color:#059669;padding:1px 5px;border-radius:2px;font-family:monospace;font-size:8px;font-weight:600">L3 TRANSPORT</span> &nbsp;<span data-i18n="l3text">OID4VCI · OID4VP · DIDComm · ISO proximity</span></div>
+        <div style="margin-bottom:3px"><span style="background:#ede9fe;color:#7c3aed;padding:1px 5px;border-radius:2px;font-family:monospace;font-size:8px;font-weight:600">L2 FORMAT</span> &nbsp;<span data-i18n="l2text">W3C VC · SD-JWT VC · mDoc · AnonCreds</span></div>
+        <div><span style="background:#fef3c7;color:#d97706;padding:1px 5px;border-radius:2px;font-family:monospace;font-size:8px;font-weight:600">L1 IDENTIFIERS</span> &nbsp;<span data-i18n="l1text">DID Core · did:web · did:key · did:ion</span></div>
+      </div>
+    </div>
+
+  </div><!-- /body-grid -->
+
+  <!-- Footer -->
+  <div class="page-footer">
+    <span data-i18n="footer">W3C · OpenID Foundation · ISO/IEC · IETF · EBSI · Hyperledger · MOSIP · IATA · UNTP</span>
+  </div>
+
+</div><!-- /page -->
+<script src="cheatsheet.js"></script>
+</body>
+</html>
