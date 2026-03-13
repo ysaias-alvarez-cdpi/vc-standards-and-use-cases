@@ -28,7 +28,6 @@ const UI = {
     ucTourism: 'Tourism / Travel',
     ucAgriculture: 'Agriculture / ESG',
     ucGovDigital: 'Gov Digital Services',
-    ucIoT: 'IoT / M2M Devices',
 
     col2Header: 'DPG Platform × Use Case Matrix',
     col2HeaderSub: 'Which platform supports what today',
@@ -41,7 +40,6 @@ const UI = {
     matrixKYC: '🏦 KYC / Finance',
     matrixAgriculture: '🌾 Agriculture / ESG',
     matrixGovDigital: '🏛️ Gov Digital',
-    matrixIoT: '🌐 IoT / M2M',
 
     legendNative: 'Native production support',
     legendPartial: 'Partial / in development',
@@ -72,13 +70,12 @@ const UI = {
     d4: '🌎 <strong>LATAM government</strong> → <span style="color:var(--quark);font-weight:600">QuarkID</span>',
     d5: '🪪 <strong>mDL / offline physical ID</strong> → <span style="color:var(--inji);font-weight:600">INJI</span> or <span style="color:var(--walt);font-weight:600">walt.id</span>',
     d6: '📦 <strong>Supply chain / agriculture</strong> → <span style="color:var(--walt);font-weight:600">walt.id</span> + W3C VC + OID4VC',
-    d7: '🌐 <strong>IoT / M2M (frontier)</strong> → Any OID4VC + DIDComm layer',
-
+ 
     stackTitle: 'The Four Layers (Stack)',
     l4text: 'Trust Registry · EBSI · OpenID Federation',
     l3text: 'OID4VCI · OID4VP · DIDComm · ISO proximity',
     l2text: 'W3C VC · SD-JWT VC · mDoc · AnonCreds',
-    l1text: 'DID Core · did:web · did:key · did:ion',
+    l1text: 'DID Core · did:web · did:key · did:jwk',
 
     footer: 'W3C · OpenID Foundation · ISO/IEC · IETF · EBSI · Hyperledger · MOSIP · IATA · UNTP',
   },
@@ -112,7 +109,6 @@ const UI = {
     ucTourism: 'Turismo / Viajes',
     ucAgriculture: 'Agricultura / ESG',
     ucGovDigital: 'Servicios Digitales Gubernamentales',
-    ucIoT: 'Dispositivos IoT / M2M',
 
     col2Header: 'Matriz Plataforma DPG × Caso de Uso',
     col2HeaderSub: 'Qué plataforma soporta qué hoy',
@@ -125,7 +121,6 @@ const UI = {
     matrixKYC: '🏦 KYC / Finanzas',
     matrixAgriculture: '🌾 Agricultura / ESG',
     matrixGovDigital: '🏛️ Gobierno Digital',
-    matrixIoT: '🌐 IoT / M2M',
 
     legendNative: 'Soporte nativo en producción',
     legendPartial: 'Parcial / en desarrollo',
@@ -156,13 +151,12 @@ const UI = {
     d4: '🌎 <strong>Gobierno LATAM</strong> → <span style="color:var(--quark);font-weight:600">QuarkID</span>',
     d5: '🪪 <strong>mDL / ID físico offline</strong> → <span style="color:var(--inji);font-weight:600">INJI</span> o <span style="color:var(--walt);font-weight:600">walt.id</span>',
     d6: '📦 <strong>Cadena de suministro / agricultura</strong> → <span style="color:var(--walt);font-weight:600">walt.id</span> + W3C VC + OID4VC',
-    d7: '🌐 <strong>IoT / M2M (frontera)</strong> → Cualquier OID4VC + capa DIDComm',
 
     stackTitle: 'Las Cuatro Capas (Stack)',
     l4text: 'Trust Registry · EBSI · OpenID Federation',
     l3text: 'OID4VCI · OID4VP · DIDComm · Proximidad ISO',
     l2text: 'W3C VC · SD-JWT VC · mDoc · AnonCreds',
-    l1text: 'DID Core · did:web · did:key · did:ion',
+    l1text: 'DID Core · did:web · did:key · did:jwk',
 
     footer: 'W3C · OpenID Foundation · ISO/IEC · IETF · EBSI · Hyperledger · MOSIP · IATA · UNTP',
   },
