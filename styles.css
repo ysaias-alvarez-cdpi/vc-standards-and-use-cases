@@ -66,11 +66,6 @@ h1 span { color:var(--accent); }
 .tags { display:flex; flex-wrap:wrap; gap:6px; }
 .tag { font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; padding:4px 10px; border-radius:4px; border:1px solid; letter-spacing:0.05em; }
 .tag.secondary { opacity:0.6; }
-.factors { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:14px; padding-top:14px; border-top:1px solid var(--border); }
-.factor { display:flex; flex-direction:column; gap:3px; }
-.factor-label { font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.1em; color:var(--text-muted); text-transform:uppercase; }
-.factor-bar { height:4px; background:var(--surface2); border-radius:2px; overflow:hidden; }
-.factor-fill { height:100%; border-radius:2px; transition:width 1s ease; }
 
 /* ── Comparison table ─────────────────────────────────────────── */
 .table-section { margin-bottom:56px; }
@@ -128,7 +123,6 @@ tr:hover td { background:rgba(0,212,255,0.02); }
 .c-ebsi   { color:#ec4899; border-color:#ec4899; background:rgba(236,72,153,0.08); }
 .dot-w3c{background:#00d4ff} .dot-mdoc{background:#7c3aed} .dot-oidc{background:#10b981}
 .dot-anoncred{background:#f59e0b} .dot-sd-jwt{background:#f97316} .dot-ebsi{background:#ec4899}
-.bar-privacy{background:#f59e0b} .bar-interop{background:#ec4899} .bar-oidc{background:#10b981} .bar-mdoc{background:#7c3aed}
 
 .overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:99; }
 

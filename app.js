@@ -1089,12 +1089,7 @@ function renderCards() {
       <div class="card-description">${uc.description}</div>
       <div class="standards-section"><div class="standards-label">${ui.primaryLabel}</div><div class="tags">${pt}</div></div>
       <div class="standards-section"><div class="standards-label">${ui.secondaryLabel}</div><div class="tags">${st}</div></div>
-      <div class="factors">
-        <div class="factor"><div class="factor-label">${ui.factorPrivacy}</div><div class="factor-bar"><div class="factor-fill bar-privacy" style="width:${uc.privacy}%"></div></div></div>
-        <div class="factor"><div class="factor-label">${ui.factorInterop}</div><div class="factor-bar"><div class="factor-fill bar-interop" style="width:${uc.interop}%"></div></div></div>
-        <div class="factor"><div class="factor-label">${ui.factorAdoption}</div><div class="factor-bar"><div class="factor-fill bar-oidc" style="width:${uc.adoption}%"></div></div></div>
-        <div class="factor"><div class="factor-label">${ui.factorOffline}</div><div class="factor-bar"><div class="factor-fill bar-mdoc" style="width:${uc.offline}%"></div></div></div>
-      </div>`;
+      `;
     grid.appendChild(card);
   });
 }
